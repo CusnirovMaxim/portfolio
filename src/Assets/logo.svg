@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="50" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 40px;
+      fill: #c770f0;
+    }
+  </style>
+  <text x="50%" y="50%" text-anchor="middle" dy=".35em" class="logo-text">KM</text>
+</svg> 

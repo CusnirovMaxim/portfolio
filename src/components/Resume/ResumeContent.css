@@ -1,0 +1,164 @@
+.resume-content {
+  padding: 50px 0;
+  color: var(--text-primary);
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.resume-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.resume-header h2 {
+  color: var(--primary-color);
+  font-size: 1.8em;
+}
+
+.resume-contact {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resume-contact p {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: var(--text-primary);
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #cd5ff8;
+  margin: 0 15px;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #a742ea;
+}
+
+.resume-section {
+  margin-bottom: 40px;
+}
+
+.resume-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.education-item {
+  margin-bottom: 25px;
+}
+
+.education-item h4 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.education-item p {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.date {
+  color: var(--primary-color);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.skills-list, .language-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li, .language-list li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.project-item {
+  margin-bottom: 25px;
+}
+
+.project-item h4 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  margin-bottom: 10px;
+}
+
+.project-item a {
+  color: #cd5ff8;
+  text-decoration: none;
+}
+
+.project-item a:hover {
+  color: #a742ea;
+}
+
+.language-item {
+  margin-bottom: 15px;
+}
+
+.language-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.language-name {
+  color: white;
+}
+
+.language-level {
+  color: #8a49a8;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(205, 95, 248, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #cd5ff8;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .resume-header h1 {
+    font-size: 2em;
+  }
+  
+  .resume-header h2 {
+    font-size: 1.5em;
+  }
+  
+  .resume-section {
+    margin-bottom: 30px;
+  }
+}
+
+/* Стили для светлой темы */
+body.light-theme .resume-content,
+body.light-theme .resume-header h1,
+body.light-theme .resume-contact p,
+body.light-theme .education-item h4,
+body.light-theme .education-item p {
+  color: #000000 !important;
+} 
