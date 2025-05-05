@@ -1,51 +1,47 @@
-# Personal Portfolio Website
+# Portfolio Website
 
-## Overview
-Modern and responsive portfolio website built with React.js, showcasing my projects and skills.
+## 🚀 О проекте
+Персональный сайт-портфолио, разработанный с использованием современных веб-технологий. Сайт включает в себя адаптивный дизайн, темную/светлую тему и интерактивные элементы.
 
-![Portfolio Preview](Images/readme-img.png)
-
-## Technologies Used
+## 🛠 Технологии
 - React.js
 - Bootstrap
-- CSS3 (Custom Animations)
+- CSS3 (Кастомные анимации)
 - Node.js
 - JavaScript (ES6+)
 
-## Features
-- 🌓 Dark/Light Theme
-- 📱 Fully Responsive Design
-- ✨ Modern UI/UX
-- 🎯 Interactive Components
-- 🚀 Optimized Performance
-- 🎨 Custom Animations
+## ✨ Особенности
+- 🌓 Темная/Светлая тема
+- 📱 Адаптивный дизайн
+- ✨ Современный UI/UX
+- 🎯 Интерактивные компоненты
+- 🚀 Оптимизированная производительность
+- 🎨 Кастомные анимации
 
-## Live Demo
-[View Portfolio](https://cusnirovmaxim.github.io/portfolio/)
+## 💻 Установка и запуск
 
-## Installation and Setup
-1. Clone the repository
+1. Клонировать репозиторий
 ```bash
 git clone https://github.com/CusnirovMaxim/portfolio.git
 ```
 
-2. Install dependencies
+2. Установить зависимости
 ```bash
 cd portfolio
 npm install
 ```
 
-3. Run development server
+3. Запустить проект
 ```bash
 npm start
 ```
 
-4. Build for production
+4. Сборка проекта
 ```bash
 npm run build
 ```
 
-## Project Structure
+## 📁 Структура проекта
 ```
 portfolio/
   ├── src/
@@ -57,6 +53,6 @@ portfolio/
   └── package.json
 ```
 
-## Contact
+## 📞 Контакты
 - Email: maximcusnirovvv@gmail.com
 - GitHub: [@CusnirovMaxim](https://github.com/CusnirovMaxim) 
