@@ -1,0 +1,258 @@
+.settings-container {
+  padding: 150px 0 2rem 0; /* Increased top padding again for more space from navbar */
+  min-height: 100vh;
+  background: transparent; /* Make background transparent to let particles be the main background */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure particles background covers the whole container */
+#particles-js-settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.settings-card {
+  background: rgba(10, 4, 23, 1.0); /* Полностью непрозрачный темный фон */
+  border: 1px solid rgba(142, 45, 226, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(142, 45, 226, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.settings-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(142, 45, 226, 0.5); /* Сохраняем приятную тень при наведении */
+}
+
+.settings-card .card-header {
+  background: linear-gradient(45deg, rgba(10, 4, 23, 0.9), rgba(15, 10, 35, 0.9)); /* Темный градиент для заголовка */
+  border-bottom: 1px solid rgba(142, 45, 226, 0.7);
+  color: var(--primary-color); /* Изменение цвета заголовка на фиолетовый */
+  font-size: 1.8rem;
+  padding: 1.5rem;
+  border-radius: 15px 15px 0 0 !important;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.settings-card .card-body {
+  padding: 2rem;
+}
+
+.form-label {
+  color: var(--primary-color); /* Изменение цвета меток на фиолетовый */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;          
+  gap: 0.5rem;
+}
+
+.form-control {
+  background: rgba(15, 10, 35, 0.98); /* Almost fully opaque */
+  border: 1px solid rgba(142, 45, 226, 0.3); /* Slightly less strong border */
+  border-radius: 8px;
+  color: var(--text-primary); /* Text color for readability */
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background: rgba(15, 10, 35, 1); /* Fully opaque on focus */
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(142, 45, 226, 0.4); /* Softer shadow on focus */
+  color: var(--text-primary);
+}
+
+.form-control::placeholder {
+  color: rgba(142, 45, 226, 0.7); /* Изменение цвета заполнителей на фиолетовый с прозрачностью */
+}
+
+.btn-save {
+  background: linear-gradient(45deg, var(--primary-color), #4a00e0);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-save:hover {
+  background: linear-gradient(45deg, #4a00e0, var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(142, 45, 226, 0.4);
+}
+
+.btn-danger {
+  background: rgba(255, 77, 77, 0.4); /* More opaque red background */
+  border: 1px solid rgba(255, 77, 77, 0.5); /* Stronger border */
+  color: #ff4d4d;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background: rgba(255, 77, 77, 0.6); /* Even more opaque on hover */
+  border-color: rgba(255, 77, 77, 0.7);
+  transform: translateY(-2px);
+}
+
+.alert {
+  border-radius: 8px;
+  border: none;
+  background: rgba(15, 10, 35, 0.9); /* Темный фон для сообщений */
+  color: var(--text-primary);
+}
+
+.alert-success {
+  background-color: rgba(40, 167, 69, 0.6); /* Более темный зеленый */
+  color: #28a745;
+  border-left: 4px solid #28a745;
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.6); /* Более темный красный */
+  color: #dc3545;
+  border-left: 4px solid #dc3545;
+}
+
+.alert-info {
+  background-color: rgba(23, 162, 184, 0.6); /* Более темный синий */
+  color: #17a2b8;
+  border-left: 4px solid #17a2b8;
+}
+
+.language-item {
+  background: rgba(15, 10, 35, 0.9); /* Темный фон для элементов языка */
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.language-item:hover {
+  background: rgba(15, 10, 35, 1.0); /* Полностью непрозрачный на наведении */
+  transform: translateX(5px);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.settings-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Стили для светлой темы */
+body.light-theme .settings-card {
+  background: rgba(10, 4, 23, 0.95); /* Consistent dark, semi-transparent background */
+  box-shadow: 0 8px 32px rgba(142, 45, 226, 0.1); /* Сохраняем тень */
+}
+
+body.light-theme .settings-card .card-header {
+  background: linear-gradient(45deg, rgba(10, 4, 23, 0.9), rgba(15, 10, 35, 0.9)); /* Consistent dark gradient for header */
+  border-bottom: 1px solid rgba(142, 45, 226, 0.08);
+  color: var(--primary-color); /* Изменение цвета заголовка на фиолетовый для светлой темы */
+  font-size: 1.8rem;
+}
+
+body.light-theme .form-control {
+  background: rgba(15, 10, 35, 0.98); /* Consistent dark, semi-transparent background */
+  border-color: rgba(142, 45, 226, 0.15); /* Slightly more visible border */
+  color: var(--text-primary); /* Ensure text is dark */
+}
+
+body.light-theme .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(142, 45, 226, 0.1); /* Lighter shadow on focus */
+  background: rgba(15, 10, 35, 1); /* Consistent dark, semi-transparent background */
+}
+
+body.light-theme .form-control::placeholder {
+  color: rgba(142, 45, 226, 0.6); /* Фиолетовый заполнитель для светлой темы */
+}
+
+body.light-theme .language-item {
+  background: rgba(15, 10, 35, 0.9); /* Consistent dark, semi-transparent background */
+}
+
+body.light-theme .language-item:hover {
+  background: rgba(15, 10, 35, 1.0); /* Consistent dark, semi-transparent background on hover */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 1rem;
+  }
+  
+  .settings-card .card-header {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .settings-card .card-body {
+    padding: 1.5rem;
+  }
+}
+
+.quote-card-view {
+  border: none !important;
+  color: var(--text-primary) !important; /* Убедитесь, что текст СВЕТЛЫЙ, используйте var(--text-primary) */
+  background: rgba(0, 0, 0, 0.4); /* Темный, ПРОЗРАЧНЫЙ фон для темной темы */
+  border-radius: 15px !important;
+  box-shadow: 0 8px 32px rgba(142, 45, 226, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.quote-card-view:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 12px 40px rgba(142, 45, 226, 0.5) !important;
+}
+
+/* ЭТО ОЧЕНЬ ВАЖНО: Убедитесь, что эта часть также настроена на темный фон и светлый текст, чтобы переопределить светлую тему */
+body.light-theme .quote-card-view {
+  background: rgba(0, 0, 0, 0.4); /* Обеспечиваем темный фон даже в светлой теме */
+  box-shadow: 0 8px 32px rgba(142, 45, 226, 0.1) !important;
+  color: var(--text-primary) !important; /* Обеспечиваем светлый текст для этой карточки в светлой теме */
+}
+
+body.light-theme .quote-card-view:hover {
+  box-shadow: 0 12px 40px rgba(142, 45, 226, 0.15) !important;
+}
+
+/* Также убедитесь, что элементы списка тоже светлые */
+.about-activity {
+  list-style: none !important;
+  text-align: left !important;
+  padding-left: 1px !important;
+  color: var(--text-primary) !important; /* Убедитесь, что этот цвет СВЕТЛЫЙ */
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+  list-style: none;
+  color: var(--imp-text-color) !important; /* Убедитесь, что эта строка установлена на фиолетовый */
+}
+
+body.light-theme .quote-card-view {
+  background: rgba(0, 0, 0, 0.4); /* Обеспечиваем темный фон даже в светлой теме */
+  box-shadow: 0 8px 32px rgba(142, 45, 226, 0.1) !important;
+  color: var(--imp-text-color) !important; /* Убедитесь, что эта строка установлена на фиолетовый */
+}

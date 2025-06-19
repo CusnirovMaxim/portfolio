@@ -10,13 +10,17 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineSetting,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
-import ThemeToggle from "./ThemeToggle/ThemeToggle";
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const { isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -27,6 +31,11 @@ function NavBar() {
   }
 
   window.addEventListener("scroll", scrollHandler);
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
 
   return (
     <Navbar
@@ -77,7 +86,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/project"
+                to="/portfolio"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
@@ -97,6 +106,16 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/settings"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineSetting style={{ marginBottom: "2px" }} /> Настройки
+              </Nav.Link>
+            </Nav.Item>
+
             <Nav.Item className="fork-btn">
               <Button
                 href="https://github.com/CusnirovMaxim"
@@ -108,9 +127,16 @@ function NavBar() {
               </Button>
             </Nav.Item>
 
-            <Nav.Item style={{ display: 'flex', alignItems: 'center' }}>
-              <ThemeToggle />
-            </Nav.Item>
+            {isAuthenticated && (
+              <Nav.Item>
+                <Nav.Link
+                  className="btn btn-outline-danger ms-2"
+                  onClick={handleLogout}
+                >
+                  Выйти
+                </Nav.Link>
+              </Nav.Item>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,0 +1,54 @@
+.github-login-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  background: rgba(142, 45, 226, 0.1);
+  border-radius: 15px;
+  margin: 2rem 0;
+}
+
+.github-login-prompt svg {
+  color: #8e2de2;
+  margin-bottom: 1rem;
+}
+
+.github-login-prompt h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.github-login-prompt p {
+  color: var(--text-secondary);
+}
+
+.project-card {
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card .card-text {
+  color: #fff !important;
+}
+
+.project-card-view {
+  background-color: #1e1130; /* Darker background */
+  border: 1.7px solid rgba(142, 45, 226, 0.2) !important;
+  border-radius: 15px !important; /* Slightly more rounded corners */
+  padding: 25px !important;
+  transition: all 0.4s ease !important;
+  box-shadow: 0 0 20px rgba(142, 45, 226, 0.3), 0 0 40px rgba(142, 45, 226, 0.1) !important; /* Glowing shadow */
+  opacity: 0.98;
+}
+
+.project-card-view:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 25px rgba(155, 88, 173, 0.8), 0 0 50px rgba(155, 88, 173, 0.2) !important; /* Enhanced hover glow */
+} 

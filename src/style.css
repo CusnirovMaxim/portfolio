@@ -1,40 +1,21 @@
 :root {
   --primary-color: #8e2de2;  /* Фиолетовый */
-  --background-color: #0a0417;  /* Более мягкий темный фон */
+  --background-color: #000000;  /* Абсолютно черный фон */
   --text-primary: #d4d4d4;  /* Более светлый текст для лучшей читаемости */
   --text-secondary: rgba(212, 212, 212, 0.7);
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(10, 4, 23, 0.8),
-    rgba(15, 10, 35, 0.9)
-  );
+  --section-background-color: transparent; /* Прозрачный для звезд */
   --image-gradient: linear-gradient(
     to bottom left,
-    rgba(10, 4, 23, 0.8),
-    rgba(15, 10, 35, 0.9)
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7)
   );
-}
 
-/* Стили для светлой темы */
-body.light-theme {
-  --background-color: #f0f0f0;  /* Мягкий светлый фон */
-  --text-primary: #1a0b2e;
-  --text-secondary: rgba(26, 11, 46, 0.7);
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(230, 230, 230, 0.8),
-    rgba(240, 240, 240, 0.9)
-  );
-  --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(230, 230, 230, 0.8),
-    rgba(240, 240, 240, 0.9)
-  );
+  --imp-text-color: #c770f0;
 }
 
 /* Применяем переменные к существующим стилям */
 body {
-  background-color: var(--background-color) !important;
+  background-color: var(--background-color) !important; /* Use variable for background */
   color: var(--text-primary) !important;
   font-weight: 400 !important;
   line-height: 1.6 !important;
@@ -44,38 +25,51 @@ body {
   background-color: rgba(5, 2, 8, 0.97) !important;
 }
 
-.light-theme .navbar {
-  background-color: rgba(230, 230, 230, 0.97) !important;
-}
-
 .sticky {
   background-color: var(--background-color) !important;
   opacity: 0.97 !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
 }
 
-.light-theme .project-card-view {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+.project-card-view {
+  position: relative !important;
+  height: 100% !important;
+  background: #1e1130; /* Темный, более плотный фон для карточки */
+  border: 1.7px solid rgba(142, 45, 226, 0.2) !important;
+  border-radius: 20px !important;
+  padding: 25px !important;
+  transition: all 0.4s ease !important;
+  box-shadow: 0 0 20px rgba(142, 45, 226, 0.3), 0 0 40px rgba(142, 45, 226, 0.1) !important;
+  opacity: 0.98;
+}
+
+.project-card-view:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 25px rgba(155, 88, 173, 0.8), 0 0 50px rgba(155, 88, 173, 0.2) !important;
+}
+
+.tech-icons {
+  background-color: rgba(20, 15, 35, 0.9) !important;
   border: 1.7px solid rgba(142, 45, 226, 0.2) !important;
   box-shadow: 0 4px 5px 3px rgba(142, 45, 226, 0.1) !important;
 }
 
-.light-theme .tech-icons {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  border: 1.7px solid rgba(142, 45, 226, 0.2) !important;
-  box-shadow: 0 4px 5px 3px rgba(142, 45, 226, 0.1) !important;
-}
-
-.light-theme .tech-icons:hover {
-  background-color: rgba(255, 255, 255, 1) !important;
+.tech-icons:hover {
+  background-color: rgba(20, 15, 35, 1) !important;
   border-color: rgba(142, 45, 226, 0.4) !important;
   box-shadow: 
     0 0 20px rgba(142, 45, 226, 0.3),
     0 0 40px rgba(142, 45, 226, 0.1) !important;
 }
 
-.light-theme .quote-card-view {
-  background-color: transparent !important;
+.quote-card-view {
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px rgba(142, 45, 226, 0.1) !important;
+}
+
+.quote-card-view:hover {
+  box-shadow: 0 12px 40px rgba(142, 45, 226, 0.15) !important;
 }
 
 html {
@@ -522,7 +516,8 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-color: transparent !important; /* Убедимся, что фон прозрачный */
+  color: var(--text-primary) !important;
 }
 
 .project-card {
@@ -534,21 +529,19 @@ button:focus {
 .project-card-view {
   position: relative !important;
   height: 100% !important;
-  background-color: rgba(20, 15, 35, 0.9) !important;
+  background: #1e1130; /* Darker, more solid background */
   border: 1.7px solid rgba(142, 45, 226, 0.2) !important;
   border-radius: 20px !important;
   padding: 25px !important;
   transition: all 0.4s ease !important;
-  box-shadow: 0 4px 5px 3px rgba(142, 45, 226, 0.1) !important;
+  box-shadow: 0 0 20px rgba(142, 45, 226, 0.3), 0 0 40px rgba(142, 45, 226, 0.1) !important; /* Softer, glowing shadow */
+  opacity: 0.98;
 }
 
 .project-card-view:hover {
-  transform: translateY(-5px) !important;
-  background-color: rgba(20, 15, 35, 1) !important;
-  border-color: rgba(142, 45, 226, 0.4) !important;
-  box-shadow: 
-    0 0 20px rgba(142, 45, 226, 0.3),
-    0 0 40px rgba(142, 45, 226, 0.1) !important;
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 25px rgba(155, 88, 173, 0.8), 0 0 50px rgba(155, 88, 173, 0.2) !important; /* Enhanced hover glow */
 }
 
 .project-card-view img {
@@ -572,11 +565,12 @@ button:focus {
 }
 
 .blog-card-view {
-  background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
+  border: none !important;
   color: var(--text-primary) !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
+  background: rgba(0, 0, 0, 0.4); /* Еще более прозрачный фон для темной темы */
+  border-radius: 15px !important;
+  box-shadow: 0 8px 32px rgba(142, 45, 226, 0.4) !important;
+  transition: all 0.3s ease !important;
 }
 
 .blog-link {
@@ -589,9 +583,8 @@ button:focus {
 }
 
 .blog-card-view:hover {
-  transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 12px 40px rgba(142, 45, 226, 0.5) !important;
 }
 
 .card-img-top {
@@ -609,16 +602,16 @@ button:focus {
 .btn-primary {
   background: linear-gradient(135deg, #8e2de2, #4a00e0) !important;
   border: none !important;
-  border-radius: 10px !important;
+  border-radius: 25px !important; /* More rounded corners */
   font-weight: 500 !important;
   padding: 10px 20px !important;
   transition: all 0.3s ease !important;
-  opacity: 0.9 !important;
+  opacity: 0.9;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 5px 15px rgba(142, 45, 226, 0.3) !important;
+  box-shadow: 0 5px 15px rgba(142, 45, 226, 0.5) !important; /* Stronger hover shadow */
   opacity: 1 !important;
 }
 .btn:focus {
@@ -648,7 +641,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-color: transparent !important; /* Убедимся, что фон прозрачный */
   color: var(--text-primary) !important;
 }
 
@@ -691,7 +684,24 @@ button:focus {
 .quote-card-view {
   border: none !important;
   color: var(--text-primary) !important;
-  background-color: transparent !important;
+  background: rgba(0, 0, 0, 0.4); /* Еще более прозрачный фон для темной темы */
+  border-radius: 15px !important;
+  box-shadow: 0 8px 32px rgba(142, 45, 226, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.quote-card-view:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 12px 40px rgba(142, 45, 226, 0.5) !important;
+}
+
+body.light-theme .quote-card-view {
+  background: rgba(0, 0, 0, 0.4); /* Darker, more transparent background for light theme */
+  box-shadow: 0 8px 32px rgba(142, 45, 226, 0.1) !important;
+}
+
+body.light-theme .quote-card-view:hover {
+  box-shadow: 0 12px 40px rgba(142, 45, 226, 0.15) !important;
 }
 
 .about-activity {
@@ -713,7 +723,7 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-color: transparent !important; /* Убедимся, что фон прозрачный */
   color: var(--text-primary) !important;
 }
 
@@ -760,7 +770,7 @@ button:focus {
 .resume .resume-item .resume-title {
   line-height: 18px;
   font-size: 0.9em;
-  background: var(--primary-color);
+  background: rgba(0, 0, 0, 0.6); /* Darker, more transparent background for light theme */
   padding: 8px 15px;
   display: inline-block;
   font-weight: 600;
@@ -787,7 +797,7 @@ button:focus {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: var(--background-color);
+  background: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон для темной темы */
   border: 2px solid var(--primary-color);
 }
 
@@ -1024,12 +1034,11 @@ body.light-theme .resume .resume-title {
 }
 
 body.light-theme .resume .resume-item .resume-title {
-  background: var(--primary-color);
-  color: #fff !important;
+  background: rgba(0, 0, 0, 0.6); /* Darker, more transparent background for light theme */
 }
 
 body.light-theme .resume-section {
-  color: #000000 !important;
+  color: #000000 !important; /* Ensure text is dark in light theme */
 }
 
 /* Добавление эффекта свечения для некоторых элементов */
@@ -1159,4 +1168,155 @@ body.light-theme .resume-section {
 .project-heading, .resume .resume-title {
   color: var(--text-primary) !important;
   text-shadow: 0 0 10px rgba(142, 45, 226, 0.3);
+}
+
+/* Стили для страницы входа */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent; /* Make background transparent to let particles be the main background */
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(142, 45, 226, 0.1), rgba(24, 26, 39, 0.1));
+  z-index: 1;
+}
+
+.login-box {
+  background: rgba(10, 4, 23, 0.95); /* Consistent dark, semi-transparent background */
+  border: 1px solid rgba(142, 45, 226, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(142, 45, 226, 0.4);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(142, 45, 226, 0.3);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  background: rgba(15, 10, 35, 0.98); /* Consistent dark, semi-transparent background */
+  border: 1px solid rgba(142, 45, 226, 0.3);
+  border-radius: 8px;
+  color: var(--text-primary);
+  padding: 12px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  background: rgba(15, 10, 35, 1); /* Consistent dark, semi-transparent background */
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(142, 45, 226, 0.3);
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(45deg, var(--primary-color), #4a00e0);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login-button:hover {
+  background: linear-gradient(45deg, #4a00e0, var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(142, 45, 226, 0.4);
+}
+
+.error-message {
+  color: #ff4444;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 77, 77, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 77, 77, 0.2);
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Стили для светлой темы */
+[data-theme="light"] .recaptcha-wrapper {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .recaptcha-wrapper:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+  color: #ff4444;
+  background-color: rgba(255, 77, 77, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.9em;
+  border: 1px solid rgba(255, 68, 68, 0.2);
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
 }

@@ -1,0 +1,30 @@
+.project-card-view.light-theme {
+  background-color: #ffffff; /* White background for light theme */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.project-card-view.light-theme .card-title {
+  color: #333333; /* Darker text for title */
+}
+
+.project-card-view.light-theme .card-text {
+  color: #555555; /* Darker text for description */
+}
+
+.project-card-view.light-theme .btn-primary {
+  background: linear-gradient(135deg, #6a1bb2, #8e2de2); /* Purple gradient for button */
+  border: none;
+  border-radius: 25px;
+  color: #ffffff; /* White text for button */
+  font-weight: 500;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-card-view.light-theme .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+} 
